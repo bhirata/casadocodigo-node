@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <form action='/promotions' method="post">
+            <div>
+                <select name="book[id]">
+                    <% for ( let i = 0; i < list.length; i++ ) { %>
+                        <option value="<%= list[i].id %>"><%= list[i].titulo %></option>
+                    <% } %>
+                </select>
+            </div>
+            <input type="submit" value="Register promotion" />
+        </form>
+    </body>
+</html>

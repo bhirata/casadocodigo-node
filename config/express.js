@@ -14,6 +14,7 @@ module.exports = function () {
 	app.set('view engine', 'ejs');
 	// Set views location
 	app.set('views','./app/views');
+	app.use(express.static('./app/public'));
 
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
