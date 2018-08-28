@@ -3,7 +3,11 @@ const http = require('http');
 const config = {
 	hostname: 'localhost',
 	port: 3000,
-	path: '/products'
+	path: '/products',
+	headers: {
+	    // 'Accept' : 'text/html'
+	    'Accept' : 'application/json'
+    }
 };
 
 http.get( config, ( res ) => {
