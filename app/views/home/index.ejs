@@ -248,5 +248,14 @@
         </div>
     </div>
 </footer>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  socket.on('newPromotion', function ( data ) {
+    console.log(data);
+    alert(JSON.stringify(data));
+  });
+</script>
 </body>
 </html>

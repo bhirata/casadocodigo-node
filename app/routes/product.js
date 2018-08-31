@@ -5,7 +5,7 @@ module.exports = function ( app ) {
 		const connection = app.factory.dbConnectionFactory();
 		const productsRepository = new app.repository.productRepository( connection );
 
-		productsRepository.get(function ( err, results ){
+		productsRepository.get(function ( err, results, next ){
 			if ( err ) {
 				console.log( err );
 				return next(err);
